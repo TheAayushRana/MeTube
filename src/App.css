@@ -1,0 +1,23 @@
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.signInBtn {
+  display: flex;
+  align-items: center;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: none;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  color: #1149ff;
+  font-weight: 700;
+}
+.signInBtn:hover {
+  background-color: #e3f5ff;
+}
+
+.signInBtn svg {
+  font-size: 22px;
+  padding-right: 10px;
+}

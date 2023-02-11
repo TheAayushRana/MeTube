@@ -20,7 +20,7 @@ export default function Header() {
             <RiSearchLine />
           </button>
         </div>
-        <button type="button" className={Styles.signInBtn}>
+        <button type="button" className="signInBtn">
           <RiAccountCircleLine /> Sign In
         </button>
       </div>

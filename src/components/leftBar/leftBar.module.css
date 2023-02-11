@@ -1,0 +1,51 @@
+.leftBar {
+  overflow-y: hidden;
+  height: 90vh;
+  width: 18%;
+}
+.leftBar:hover {
+  overflow-y: auto;
+}
+
+.leftBarlinks {
+  margin: 0px 15px;
+}
+.leftBarlinks a {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+.leftBarlinks svg {
+  margin-right: 25px;
+  font-size: 23px;
+}
+.leftBarlinks a:hover {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+.leftBarlinks hr,
+.lines {
+  background-color: #dfdfdf;
+  height: 1px;
+  border: none;
+}
+.signInfo {
+  padding: 10px 25px;
+}
+.signInfo p {
+  font-size: 13.5px;
+  margin: 0px 0px 10px 0px;
+}
+.explore p {
+  margin: 0px;
+  padding: 5px 0px 0px 27px;
+}
+.footer {
+  font-size: 12px;
+  padding-left: 26px;
+}
