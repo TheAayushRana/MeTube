@@ -1,7 +1,9 @@
 import "./App.css";
 import Header from "./components/header/Header";
-import HomePage from "./components/homepage/HomePage";
+import HomePage from "./components/homePage/HomePage";
 import LeftBar from "./components/leftBar/LeftBar";
+import { Routes, Route } from "react-router-dom";
+import Video from "./components/video/Video";
 
 function App() {
   return (
@@ -9,7 +11,10 @@ function App() {
       <Header />
       <div className="d-flex">
         <LeftBar />
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/watch/:id" element={<Video />} />
+        </Routes>
       </div>
     </>
   );
