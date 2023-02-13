@@ -10,10 +10,7 @@ const options = {
   },
 };
 
-export default function FetchDataFromAPI(url) {
-  let data;
-  axios
-    .get(`${baseUrl}/${url}`, options)
-    .then((response) => (data = response.data));
+export const FetchDataFromAPI = async (url) => {
+  const { data } = await axios.get(`${baseUrl}/${url}`, options);
   return data;
-}
+};

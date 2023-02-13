@@ -10,9 +10,16 @@ function App() {
     <>
       <Header />
       <div className="d-flex">
-        <LeftBar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <LeftBar />
+                <HomePage />
+              </>
+            }
+          />
           <Route path="/watch/:id" element={<Video />} />
         </Routes>
       </div>

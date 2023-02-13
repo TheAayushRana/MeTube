@@ -1,0 +1,79 @@
+.video {
+  padding: 0px 30px;
+  width: 65%;
+}
+.videoName {
+  font-size: 18px;
+}
+.channelURL {
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+.channelImg {
+  margin-right: 20px;
+}
+.subscribeBtn {
+  background: black;
+  color: white;
+  border-radius: 20px;
+  height: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.btn {
+  border: none;
+  color: black;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+.likebtn {
+  display: flex;
+  align-items: center;
+  border-radius: 20px 0px 0px 20px;
+  cursor: pointer;
+}
+.dislikebtn {
+  border-radius: 0px 20px 20px 0px;
+  margin-right: 20px;
+}
+
+.likebtn:hover,
+.dislikebtn:hover {
+  background-color: #dbdbdb;
+}
+
+.likebtn svg,
+.dislikebtn svg,
+.shareBtn svg {
+  font-size: 20px;
+  padding: 0px 10px 0px 5px;
+}
+.channelOptions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.shareBtn {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.description {
+  background-color: rgb(237, 237, 237);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0px;
+}

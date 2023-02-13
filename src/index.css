@@ -16,3 +16,7 @@ body {
   background-color: rgb(125, 125, 125);
   border-radius: 10px;
 }
+p {
+  margin: 0px;
+  padding: 0px;
+}
