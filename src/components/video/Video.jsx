@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { FetchDataFromAPI } from "../../util/FetchDataFromAPI";
 import styles from "./video.module.css";
 import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
 import { FaRegShareSquare } from "react-icons/fa";
+import SideVideoCard from "./SideVideoCard";
 
 export default function Video() {
-  const [data, setData] = useState(null);
-  const { id } = useParams();
+  const [data, setData] = useState(null); // used for storing data
+  const [relatedData, setRelatedData] = useState();
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get("v");
+  console.log("video Id", id);
 
   useEffect(() => {
-    FetchDataFromAPI(`video/details/?id=${id}`).then((data) => setData(data));
+    console.log("useEffect run");
+    FetchDataFromAPI(`video/details/?id=${id}`).then((data) => {
+      console.log(data);
+      setData(data);
+    });
   }, [id]);
 
   return (
@@ -18,6 +26,7 @@ export default function Video() {
       <div className={styles.video}>
         {data && (
           <div className={styles.videoDetails}>
+            <img src={data.thumbnails[4].url} alt={data.title} />
             <h4 className={styles.videoName}>{data.title}</h4>
             <div className={styles.author}>
               <div className="d-flex">
@@ -63,6 +72,12 @@ export default function Video() {
             </div>
           </div>
         )}
+      </div>
+      <div>
+        {relatedData &&
+          relatedData.contents.map((relatedVideo, index) => (
+            <SideVideoCard video={relatedVideo.video} key={index} />
+          ))}
       </div>
     </div>
   );

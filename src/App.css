@@ -1,7 +1,18 @@
 .d-flex {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 .signInBtn {
   display: flex;
   align-items: center;

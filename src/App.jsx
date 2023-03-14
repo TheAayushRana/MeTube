@@ -20,7 +20,7 @@ function App() {
               </>
             }
           />
-          <Route path="/watch/:id" element={<Video />} />
+          <Route path="/watch" element={<Video />} />
         </Routes>
       </div>
     </>
